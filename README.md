@@ -256,23 +256,13 @@ SOFTWARE.
 **Your Name**
 - GitHub: https://github.com/ya-yashawasthi-13
 - Email: yashawasthi88@gmail.com
+- Project Link: https://ya-yashawasthi-13.github.io/Sorting-Visualizer-Project/
 
 ## 🙏 Acknowledgments
 
 - Inspired by various sorting visualizer projects
 - Color scheme inspired by modern UI design trends
 - Algorithm implementations based on classic computer science textbooks
-
-## 📸 Screenshots
-
-### Main Interface
-![Main Interface](screenshot-main.png)
-
-### Sorting in Action
-![Sorting Animation](screenshot-sorting.png)
-
-### Algorithm Information
-![Algorithm Info](screenshot-info.png)
 
 ## ⭐ Show Your Support
 
