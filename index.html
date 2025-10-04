@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Sorting Algorithm Visualizer</h1>
+            <p>Watch sorting algorithms come to life</p>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <div class="controls-grid">
+                <div class="control-group">
+                    <label for="algorithm">Algorithm</label>
+                    <select id="algorithm">
+                        <option value="bubble">Bubble Sort</option>
+                        <option value="selection">Selection Sort</option>
+                        <option value="insertion">Insertion Sort</option>
+                        <option value="merge">Merge Sort</option>
+                        <option value="quick">Quick Sort</option>
+                        <option value="heap">Heap Sort</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="arraySize">Array Size: <span id="arraySizeValue">50</span></label>
+                    <input type="range" id="arraySize" min="10" max="100" value="50">
+                </div>
+
+                <div class="control-group">
+                    <label for="speed">Speed: <span id="speedValue">50</span></label>
+                    <input type="range" id="speed" min="1" max="100" value="50">
+                </div>
+
+                <div class="control-group">
+                    <label style="opacity: 0;">Actions</label>
+                    <div class="button-group">
+                        <button class="btn-sort" id="sortBtn">
+                            ▶ Sort
+                        </button>
+                        <button class="btn-pause" id="pauseBtn" style="display: none;">
+                            ⏸ Pause
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-reset" id="resetBtn">↻ Reset</button>
+                <button class="btn-shuffle" id="shuffleBtn">🔀 Shuffle</button>
+                <button class="btn-info" id="infoBtn">ℹ Info</button>
+            </div>
+        </div>
+
+        <!-- Info Panel -->
+        <div class="info-panel" id="infoPanel">
+            <h3 id="algoName">Bubble Sort</h3>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="label">Time Complexity</div>
+                    <div class="value" style="color: #a78bfa;" id="timeComplexity">O(n²)</div>
+                </div>
+                <div class="info-card">
+                    <div class="label">Space Complexity</div>
+                    <div class="value" style="color: #60a5fa;" id="spaceComplexity">O(1)</div>
+                </div>
+                <div class="info-card">
+                    <div class="label">Status</div>
+                    <div class="value" style="color: #10b981;" id="status">Ready</div>
+                </div>
+            </div>
+            <p id="algoDescription" style="color: #d1d5db;">Repeatedly swaps adjacent elements if in wrong order</p>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="label">Comparisons</div>
+                    <div class="value" style="color: #fbbf24;" id="comparisons">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="label">Swaps</div>
+                    <div class="value" style="color: #ef4444;" id="swaps">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="label">Time (ms)</div>
+                    <div class="value" style="color: #60a5fa;" id="time">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visualization Panel -->
+        <div class="visualization-panel">
+            <div class="array-container" id="arrayContainer"></div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(to top, #3b82f6, #a78bfa);"></div>
+                <span>Unsorted</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #fbbf24;"></div>
+                <span>Comparing</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ef4444;"></div>
+                <span>Swapping</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #10b981;"></div>
+                <span>Sorted</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
